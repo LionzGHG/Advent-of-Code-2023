@@ -1,1 +1,3 @@
-# Advent-of-Code-2023
+# aoc
+
+Advent of Code in Haskell, because i like to suffer.
