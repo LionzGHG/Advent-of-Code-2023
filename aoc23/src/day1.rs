@@ -8,7 +8,7 @@ pub mod day1 {
         let input: String = fs::read_to_string("day1input.txt").unwrap();
         let mut calibs: Vec<String> = Vec::new();
 
-        let mut it = input.lines().peekable();
+        let mut it: std::iter::Peekable<std::str::Lines<'_>> = input.lines().peekable();
         while let Some(n) = it.next() {
             let nums: Vec<char> = n.chars().filter(|x| x.is_ascii_digit()).collect();
             calibs.push(format!("{}{}", nums.first().unwrap(), nums.last().unwrap())); 
@@ -42,7 +42,7 @@ pub mod day1 {
             new_input.push_str("\n");
         }
 
-        let mut it = new_input.lines().peekable();
+        let mut it: std::iter::Peekable<std::str::Lines<'_>> = new_input.lines().peekable();
         while let Some(n) = it.next() {
             let nums: Vec<char> = n.chars().filter(|x| x.is_ascii_digit()).collect();
             calibs.push(format!("{}{}", nums.first().unwrap(), nums.last().unwrap())); 
